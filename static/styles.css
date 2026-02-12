@@ -1,0 +1,64 @@
+/* for base.html */
+.upper-space-container {
+    margin-top: 7rem;
+}
+
+/* for login.html and singup.html */
+.page-title{
+    font-size: 15px;
+    text-align: center;
+}
+
+nav.navbar.navbar-expand-lg.navbar-light.navbar-bg-color.fixed-top {
+    background-color: aquamarine;
+}
+
+button.navbar-toggler.no-color {
+    background-color: rgba(255, 250, 250, 0.68);
+}
+
+h1.title-font {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(132, 183, 190, 0.089);
+}
+
+button.btn.btn-primary.add-button-style {
+    background-color: cadetblue;
+    border-color: slategrey;
+    margin-bottom: 5px;
+}
+
+.like-button{
+    width: 17px;
+}
+
+/* Adjust the size of the image icons */
+#wishlist-link img,
+#cart-link img,
+#login-link img,
+#logout-link img {
+    height: 20px; /* Set the height to 60 pixels */
+    width: 20px;  /* Maintain the aspect ratio */
+}
+
+img.icon {
+    margin: 4px 3px;
+}
+
+/* Default styles for larger screens */
+.icon-text {
+    display: none;
+}
+
+/* Media query to show/hide elements based on screen size */
+@media (max-width: 991px) {
+    .icon-text {
+        display: inline;
+    }
+
+    /* Hide images when navbar is collapsed */
+    .icon {
+        display: none;
+    }
+}

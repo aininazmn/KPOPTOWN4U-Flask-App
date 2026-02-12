@@ -1,0 +1,35 @@
+<!-- cart.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Cart{% endblock %}
+
+{% block content %}
+    <div class="mt-5">
+        <h1>Your Shopping Cart</h1>
+        <table id="cart-table" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Product</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cart_item in cart_items %}
+                <tr>
+                    <td>{{ cart_item.product.name }}</td>
+                    <td>${{ cart_item.product.price }}</td>
+                    <td>{{ cart_item.quantity }}</td>
+                    <td>${{ cart_item.product.price * cart_item.quantity }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <form action="{{ url_for('proceed_to_purchase') }}" method="post">
+            <button type="submit" class="btn btn-success">Proceed to Purchase</button>
+        </form>
+        
+    </div>
+{% endblock %}
